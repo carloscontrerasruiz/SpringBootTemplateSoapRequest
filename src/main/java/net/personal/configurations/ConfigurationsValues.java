@@ -30,6 +30,28 @@ public class ConfigurationsValues {
 	
 	@Value("${testproperties.Soap.key}")
 	private String SoapKey;
+
+	@Value("${testproperties.connectiontimeout}")
+	private int connectionTimeout;
+	
+	@Value("${testproperties.readtimeout}")
+	private int readTimeout;
+
+	public int getConnectionTimeout() {
+		return connectionTimeout;
+	}
+
+	public void setConnectionTimeout(int connectionTimeout) {
+		this.connectionTimeout = connectionTimeout;
+	}
+
+	public int getReadTimeout() {
+		return readTimeout;
+	}
+
+	public void setReadTimeout(int readTimeout) {
+		this.readTimeout = readTimeout;
+	}
 	
 	public String getSoapKey() {
 		return SoapKey;

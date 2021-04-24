@@ -41,6 +41,8 @@ public class SoapConfig {
 	public HttpComponentsMessageSender httpComponentsMessageSender() {
 		HttpComponentsMessageSender httpComponentsMessageSender = new HttpComponentsMessageSender();
 		// set the basic authorization credentials
+		httpComponentsMessageSender.setConnectionTimeout(configurationsValues.getConnectionTimeout());
+		httpComponentsMessageSender.setReadTimeout(configurationsValues.getReadTimeout());
 		httpComponentsMessageSender.setCredentials(usernamePasswordCredentials());
 
 		return httpComponentsMessageSender;
